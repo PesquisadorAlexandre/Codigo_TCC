@@ -1,0 +1,37 @@
+---
+title: 'Aula 1: Distribuição Normal'
+author: "Alexandre R. de Oliveira"
+date: "30 de março de 2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Aula 1: Distribuição Normal
+
+## Including Plots
+
+
+```{r pressure, echo=FALSE}
+x<- seq(-4, 4, len = 10000)
+fx <- dnorm(x, 0, 1)
+plot(x, fx, type = "l")
+c=0
+d=1
+polygon(x=c(0,0), y=c(c,d),col="#ff0000", density=c(10,20))
+mtext(expression(sigma^2==1), line=1)
+mtext(expression(mu==0), line=0)
+```
+
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
